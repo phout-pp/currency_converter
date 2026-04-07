@@ -83,7 +83,9 @@ async function updateUI() {
         resultValue.textContent = result;
         resultCurrency.textContent = to;
         conversionSummary.textContent = `${amount} ${from} equals`;
-        lastUpdated.textContent = `Market data as of ${new Date(data.time_last_update_utc).toLocaleDateString()}`;
+        const updateDate = new Date(data.time_last_update_utc);
+        const formattedDate = `${String(updateDate.getDate()).padStart(2, '0')}/${String(updateDate.getMonth() + 1).padStart(2, '0')}/${updateDate.getFullYear()}`;
+        lastUpdated.textContent = `Market data as of ${formattedDate}`;
 
         // 2. Update Live Rates Table (excluding current 'from' currency)
         ratesTableBody.innerHTML = popularCurrencies
