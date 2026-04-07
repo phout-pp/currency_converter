@@ -1,0 +1,17 @@
+{
+  "name": "Swift Exchange",
+  "short_name": "SwiftEx",
+  "description": "Real-time currency conversion and market insights.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "Icon.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
